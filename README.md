@@ -65,4 +65,8 @@ São dois métodos focados na tradução dos numerais para que possam ser utiliz
      def quickSort(self, arr, low, high)
      def traduzir_romano_array(self, array)
      def execute_final(self, array)
+A maioria desses métodos são bem simples e autoexplicativos mas irei dar uma breve explicação sobre cada um, primeiro o quebra_string(self, sentence) ele foi desenvolvido para ler a string proposta pela prova e quebrá-la usando splits e adicionando os resultados em um array que será retornado ao final da exxecução, ele tem um try-except para evitar que o programa der erro devido ao stack overflow ao tentar ler um caractére extra da string, o def partition(self, arr, low, high) e def quickSort(self, arr, low, high) é um algoritmo básico de quick sort que eu ja tinha desenvolvido há um tempo e estou reutilizando agora para ordenar os números e saber qual o maior e jogá-lo para o fim do array, traduzir_romano_array(self, array) é o método que vai chamar a class Solution para traduzir os numerais romanos para int e retorna o array que será utilizado no quick_sort e por fim que será utilizado para extrair o maior número e por fim o execute_final(self, array) é uma função que executa os códigos na ordem correta e garante que o retorno desejado será entregue.
+### Link do Repositório no Github
+
+     https://github.com/SigningClub/prova-fast-api
 
