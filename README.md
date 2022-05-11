@@ -1,11 +1,10 @@
 # prova-fast-api
  
-# REST API example application
+# REST API utilizando o framewok de fast-api
 
-This is a bare-bones example of a Sinatra application providing a REST
-API to a DataMapper-backed model.
+Esta é uma API básica que apresenta uma solução para o problema proposto na prova técnica da empresa Studio Sol
 
-The entire application is contained within the `app.rb` file.
+A aplicação está dividia em três partes: o main.py(onde tem a parte responsável pela omo
 
 `config.ru` is a minimal Rack configuration for unicorn.
 
