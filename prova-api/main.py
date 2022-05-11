@@ -14,15 +14,16 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 templates = Jinja2Templates(directory="templates")
-user = romano()
+romano_principal = romano()
+romano_secundário = Solution()
 @app.get("/")
 def main(request: Request):
     return RedirectResponse("/docs")
 
 @app.post("/romano")
 def numero_romano(string_input: str):
-    retorno = user.execute_final(string_input)
-    romano = user.intToRoman(retorno[len(retorno)-1])
+    retorno = romano_principal.execute_final(string_input)
+    romano = romano_secundário.intToRoman(retorno[len(retorno)-1])
     dict_retorno = {"number": romano,"value":retorno[len(retorno)-1]}
     return dict_retorno
 
