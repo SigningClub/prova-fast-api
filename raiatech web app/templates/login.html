@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://unpkg.com/twinklecss@1.1.0/twinkle.min.css"/>
+    <link href="static/style.css" rel="stylesheet">
+    </head>
+<body>
+  
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="/">
+            <h1><span>R</span>aia <span>T</span>ech</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="/" data-after="Home">Home</a></li>
+            <li><a href="#Serviços" data-after="Serviços">Serviços</a></li>
+            <li><a href="login" data-after="Login">Login</a></li>
+            <li><a href="#CriarConta" data-after="Criar Conta">Criar Conta</a></li>
+            <li><a href="#Download" data-after="Baixe Aqui">Download App</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+    <div class="flex p-20 m-6 justify-center">
+      <form method="POST">
+        <div class="mb-3">
+          <label>Email</label>
+          <input type="text" required placeholder="Your email" name="email" value="{{email}}" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label>Password</label>
+          <input type="password" required placeholder="Choose a secure password" value="{{password}}" name="password" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      </div>
+</body>
+</html>

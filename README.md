@@ -1,347 +1,51 @@
-# prova-fast-api
- 
-# REST API utilizando o framewok de fast-api
+# Projeto de Project Labs I
+`Raia Tech - Educação Gamificada`
 
-Esta é uma API básica que apresenta uma solução para o problema proposto na prova técnica da empresa Studio Sol
+<img src="https://raiatech.com.br/wp-content/uploads/2021/12/cropped-logo.png" title= "Raia Tech" />
 
-A aplicação está dividia em três partes: o main.py(onde tem a parte responsável pela omo
 
-`config.ru` is a minimal Rack configuration for unicorn.
+# RESOLUÇÕES:
+## Problema:
+- `Aulas Monótonas`
+- `Falta de Atenção`
+- `Falta de Engajamento`
 
-`run-tests.sh` runs a simplistic test and generates the API
-documentation below.
+## Solução:
+- `Gamificação do Ensino`
+- `Atividades Atrativas`
+- `Tecnologia Educacional`
 
-It uses `run-curl-tests.rb` which runs each command defined in
-`commands.yml`.
 
-## Instalar
+# FERRAMENTAS UTILIZADAS:
 
-    pip install -r requirements.txt
+**Front-End:** <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="rails" width="50" height= "50" style="max-
+width:100%;" title= "React"/>
 
-## Iniciar aplicativo
+**Back-End:** <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="rails" width="50" height= "50" style="max-
+width:100%;" title= "Python"/>
 
-    uvicorn main:app --reload
 
+# DESCRIÇÃO DO PROJETO:
 
-# REST API
+###### Utilização da realidade aumentada, com o uso direto do site com a máquina de realidade virtual. 
 
-Os métodos presentes na REST API
 
-## Método search
+# FUNCIONALIDADES:
 
-### Request
+:heavy_check_mark: `Funcionalidade 1:` Login (Professor / Aluno) - Ambiente de Saber
 
-`POST /search`
+:heavy_check_mark: `Funcionalidade 2:` Cadastro de Questões (de Roteiros) Sub funcões - Cadastro de Modelos 3D - Cadastro de gamificação
 
-    curl -i -H 'Accept: application/json' http://localhost:7000/thing/
+:heavy_check_mark: `Funcionalidade 3:` Cadastro de Lançamentos (de Roteiros)
 
-### Response
+:heavy_check_mark: `Funcionalidade 4:` Comunicação de Dados com o App
 
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 2
 
-    []
+# DESENVOLVEDORES:
 
-## Create a new Thing
+| [<img src="https://avatars.githubusercontent.com/u/63179763?v=4" width=115><br><sub>Wallace Santana</sub>](https://github.com/WallaceSantana79) |  [<img src="https://avatars.githubusercontent.com/u/65429994?v=4" width=115><br><sub>Ebert Ryan</sub>](https://github.com/EbertRyan) |  [<img src="https://avatars.githubusercontent.com/u/61208570?v=4" width=115><br><sub>Gabriel Rezende</sub>](https://github.com/SigningClub) | [<img src="https://avatars.githubusercontent.com/u/76781628?v=4" width=115><br><sub>Leandro Farias</sub>](https://github.com/leandrosfarias) |
+| :---: | :---: | :---: | :---: |
 
-### Request
-
-`POST /thing/`
-
-    curl -i -H 'Accept: application/json' -d 'name=Foo&status=new' http://localhost:7000/thing
-
-### Response
-
-    HTTP/1.1 201 Created
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 201 Created
-    Connection: close
-    Content-Type: application/json
-    Location: /thing/1
-    Content-Length: 36
-
-    {"id":1,"name":"Foo","status":"new"}
-
-## Get a specific Thing
-
-### Request
-
-`GET /thing/id`
-
-    curl -i -H 'Accept: application/json' http://localhost:7000/thing/1
-
-### Response
-
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 36
-
-    {"id":1,"name":"Foo","status":"new"}
-
-## Get a non-existent Thing
-
-### Request
-
-`GET /thing/id`
-
-    curl -i -H 'Accept: application/json' http://localhost:7000/thing/9999
-
-### Response
-
-    HTTP/1.1 404 Not Found
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 404 Not Found
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 35
-
-    {"status":404,"reason":"Not found"}
-
-## Create another new Thing
-
-### Request
-
-`POST /thing/`
-
-    curl -i -H 'Accept: application/json' -d 'name=Bar&junk=rubbish' http://localhost:7000/thing
-
-### Response
-
-    HTTP/1.1 201 Created
-    Date: Thu, 24 Feb 2011 12:36:31 GMT
-    Status: 201 Created
-    Connection: close
-    Content-Type: application/json
-    Location: /thing/2
-    Content-Length: 35
-
-    {"id":2,"name":"Bar","status":null}
-
-## Get list of Things again
-
-### Request
-
-`GET /thing/`
-
-    curl -i -H 'Accept: application/json' http://localhost:7000/thing/
-
-### Response
-
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:31 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 74
-
-    [{"id":1,"name":"Foo","status":"new"},{"id":2,"name":"Bar","status":null}]
-
-## Change a Thing's state
-
-### Request
-
-`PUT /thing/:id/status/changed`
-
-    curl -i -H 'Accept: application/json' -X PUT http://localhost:7000/thing/1/status/changed
-
-### Response
-
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:31 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 40
-
-    {"id":1,"name":"Foo","status":"changed"}
-
-## Get changed Thing
-
-### Request
-
-`GET /thing/id`
-
-    curl -i -H 'Accept: application/json' http://localhost:7000/thing/1
-
-### Response
-
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:31 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 40
-
-    {"id":1,"name":"Foo","status":"changed"}
-
-## Change a Thing
-
-### Request
-
-`PUT /thing/:id`
-
-    curl -i -H 'Accept: application/json' -X PUT -d 'name=Foo&status=changed2' http://localhost:7000/thing/1
-
-### Response
-
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:31 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 41
-
-    {"id":1,"name":"Foo","status":"changed2"}
-
-## Attempt to change a Thing using partial params
-
-### Request
-
-`PUT /thing/:id`
-
-    curl -i -H 'Accept: application/json' -X PUT -d 'status=changed3' http://localhost:7000/thing/1
-
-### Response
-
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:32 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 41
-
-    {"id":1,"name":"Foo","status":"changed3"}
-
-## Attempt to change a Thing using invalid params
-
-### Request
-
-`PUT /thing/:id`
-
-    curl -i -H 'Accept: application/json' -X PUT -d 'id=99&status=changed4' http://localhost:7000/thing/1
-
-### Response
-
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:32 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 41
-
-    {"id":1,"name":"Foo","status":"changed4"}
-
-## Change a Thing using the _method hack
-
-### Request
-
-`POST /thing/:id?_method=POST`
-
-    curl -i -H 'Accept: application/json' -X POST -d 'name=Baz&_method=PUT' http://localhost:7000/thing/1
-
-### Response
-
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:32 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 41
-
-    {"id":1,"name":"Baz","status":"changed4"}
-
-## Change a Thing using the _method hack in the url
-
-### Request
-
-`POST /thing/:id?_method=POST`
-
-    curl -i -H 'Accept: application/json' -X POST -d 'name=Qux' http://localhost:7000/thing/1?_method=PUT
-
-### Response
-
-    HTTP/1.1 404 Not Found
-    Date: Thu, 24 Feb 2011 12:36:32 GMT
-    Status: 404 Not Found
-    Connection: close
-    Content-Type: text/html;charset=utf-8
-    Content-Length: 35
-
-    {"status":404,"reason":"Not found"}
-
-## Delete a Thing
-
-### Request
-
-`DELETE /thing/id`
-
-    curl -i -H 'Accept: application/json' -X DELETE http://localhost:7000/thing/1/
-
-### Response
-
-    HTTP/1.1 204 No Content
-    Date: Thu, 24 Feb 2011 12:36:32 GMT
-    Status: 204 No Content
-    Connection: close
-
-
-## Try to delete same Thing again
-
-### Request
-
-`DELETE /thing/id`
-
-    curl -i -H 'Accept: application/json' -X DELETE http://localhost:7000/thing/1/
-
-### Response
-
-    HTTP/1.1 404 Not Found
-    Date: Thu, 24 Feb 2011 12:36:32 GMT
-    Status: 404 Not Found
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 35
-
-    {"status":404,"reason":"Not found"}
-
-## Get deleted Thing
-
-### Request
-
-`GET /thing/1`
-
-    curl -i -H 'Accept: application/json' http://localhost:7000/thing/1
-
-### Response
-
-    HTTP/1.1 404 Not Found
-    Date: Thu, 24 Feb 2011 12:36:33 GMT
-    Status: 404 Not Found
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 35
-
-    {"status":404,"reason":"Not found"}
-
-## Delete a Thing using the _method hack
-
-### Request
-
-`DELETE /thing/id`
-
-    curl -i -H 'Accept: application/json' -X POST -d'_method=DELETE' http://localhost:7000/thing/2/
-
-### Response
-
-    HTTP/1.1 204 No Content
-    Date: Thu, 24 Feb 2011 12:36:33 GMT
-    Status: 204 No Content
-    Connection: close
+| [<img src="https://avatars.githubusercontent.com/u/75454785?v=4" width=115><br><sub>Kaio Antônio</sub>](https://github.com/KaioAntonio) |  [<img src="https://avatars.githubusercontent.com/u/60762180?v=4" width=115><br><sub>Vitor Costa</sub>](https://github.com/vitorcosta26) |  [<img src="https://avatars.githubusercontent.com/u/83619746?v=4" width=115><br><sub>Matheus Gonçalves</sub>](https://github.com/Malakaba) | [<img src="https://avatars.githubusercontent.com/u/11787314?v=4" width=115><br><sub>Rene Nunes</sub>](https://github.com/renemichelnunes) |
+| :---: | :---: | :---: | :---: |
 
