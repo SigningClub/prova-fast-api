@@ -14,27 +14,24 @@ documentation below.
 It uses `run-curl-tests.rb` which runs each command defined in
 `commands.yml`.
 
-## Install
+## Instalar
 
-    bundle install
+    pip install -r requirements.txt
 
-## Run the app
+## Iniciar aplicativo
 
-    unicorn -p 7000
+    uvicorn main:app --reload
 
-## Run the tests
-
-    ./run-tests.sh
 
 # REST API
 
-The REST API to the example app is described below.
+Os métodos presentes na REST API
 
-## Get list of Things
+## Método search
 
 ### Request
 
-`GET /thing/`
+`POST /search`
 
     curl -i -H 'Accept: application/json' http://localhost:7000/thing/
 
