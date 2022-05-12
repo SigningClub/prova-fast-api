@@ -20,7 +20,7 @@ romano_secundário = Solution()
 def main(request: Request):
     return RedirectResponse("/docs")
 
-@app.post("/romano")
+@app.post("/search")
 def numero_romano(string_input: str):
     retorno = romano_principal.execute_final(string_input)
     romano = romano_secundário.intToRoman(retorno[len(retorno)-1])
