@@ -21,6 +21,14 @@ No diretório do main.py executar o comando:
 
 Os métodos presentes na REST API
 
+### Request
+
+`GET /`
+
+    curl -X 'GET' \'http://127.0.0.1:8000/' \-H 'accept: application/json'
+
+O propósito desse método é apenas para ser mais conveniente de acessar o swagger e testar o método /search
+
 ## Método search
 
 ### Request
